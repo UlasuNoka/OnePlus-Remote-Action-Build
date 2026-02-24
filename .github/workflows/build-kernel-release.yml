@@ -430,14 +430,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: luigimak/OnePlus_KernelSU_SUSFS
-          ref: main_oppad
+          ref: main_luigimak
           sparse-checkout: |
             manifests/
           sparse-checkout-cone-mode: false
 
       - name: 🔨 Build Kernel
         id: build
-        uses: luigimak/OnePlus_KernelSU_SUSFS/.github/actions@main_oppad
+        uses: luigimak/OnePlus_KernelSU_SUSFS/.github/actions@main_luigimak
         with:
           op_config_json: ${{ steps.prepare_config.outputs.config_json }}
           ksu_type: ${{ matrix.ksu_type }}

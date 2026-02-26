@@ -141,7 +141,7 @@ jobs:
       - name: 📥 Checkout Code (to access configs/)
         uses: actions/checkout@v4
         with:
-          ref: devices_fatal
+          ref: devices
           sparse-checkout: |
             configs/
           sparse-checkout-cone-mode: false
